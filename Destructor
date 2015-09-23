@@ -1,0 +1,25 @@
+using UnityEngine;
+using System.Collections;
+
+public class Destructor : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+	//Destuye el fantasma cuando el jugador entra en el rango del la Luz.
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.tag == "Lampara") {
+			Debug.Break ();
+		}
+		else{
+			Destroy(GameObject.Find("Fantasma"));
+		}
+	}
+}
