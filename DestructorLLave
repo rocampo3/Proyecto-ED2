@@ -1,0 +1,25 @@
+using UnityEngine;
+using System.Collections;
+
+public class DestructorLLave : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+	//Destuye la llave cuando el jugador la toca
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.tag == "Cuerpo") {
+			Debug.Break ();
+		}
+		else{
+			Destroy(GameObject.Find("LLave"));
+		}
+	}
+}
