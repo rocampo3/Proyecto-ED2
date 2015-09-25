@@ -1,0 +1,26 @@
+using UnityEngine;
+using System.Collections;
+
+public class FollowFantasma : MonoBehaviour {
+	
+	public Transform target;
+	public float speed = 3f;
+	
+	void Start () {
+
+	}
+	/*
+	 * Encargado de de la direccion a donde mire el fantasma y seguir al jugador
+	 * simple algoritmo de busqueda sin nodos o matriz
+	 * proxima version, con algoritmo mas completo
+	 */
+	void Update(){
+
+		transform.LookAt(target.position);
+		transform.Rotate(new Vector3(0,-90,0),Space.Self);
+
+		if (Vector3.Distance(transform.position,target.position)>0f){
+			transform.Translate(new Vector3(speed* Time.deltaTime,0,0) );
+		}
+	}
+}
