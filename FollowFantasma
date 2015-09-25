@@ -13,6 +13,8 @@ public class FollowFantasma : MonoBehaviour {
 	 * Encargado de de la direccion a donde mire el fantasma y seguir al jugador
 	 * simple algoritmo de busqueda sin nodos o matriz
 	 * proxima version, con algoritmo mas completo
+	 * ayuda para crear este algoritmo:
+	 * http://answers.unity3d.com/questions/607100/how-to-make-an-ai-to-follow-the-player-in-2d-c.html
 	 */
 	void Update(){
 
